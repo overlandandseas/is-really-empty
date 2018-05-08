@@ -1,0 +1,12 @@
+{
+  "name": "is-really-empty",
+  "version": "0.0.1",
+  "description": "Checks is passed in value is really empty or not.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["is", "really", "empty"],
+  "author": "Lucas Overland",
+  "license": "WTFPL"
+}
