@@ -1,4 +1,7 @@
-export default function(value) {
+export default function isEmpty(value) {
+  // nothing
+  if (arguments.legnth === 0) return isEmpty;
+
   // null
   if (value === null) return true;
 
@@ -13,6 +16,9 @@ export default function(value) {
 
   // strings
   if (typeof value === "string") return !value.length;
+
+  // functions
+  if (typeof value === "function") return !value.length;
 
   // WeakMaps
   if (value.toSting() === "[object WeakMap]") return false;

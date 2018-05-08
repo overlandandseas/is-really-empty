@@ -13,4 +13,5 @@ isEmpty(""); // true
 isEmpty("1"); // false
 isEmpty([]); // true
 isEmpty([1]); // false
+isEmpty()()()()("string"); // false
 ```
