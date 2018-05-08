@@ -1,6 +1,6 @@
 {
   "name": "is-really-empty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Checks is passed in value is really empty or not.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/overlandandseas/is-really-empty.git"
   },
-  "keywords": ["is", "really", "empty"],
+  "keywords": [
+    "is",
+    "really",
+    "empty"
+  ],
   "author": "Lucas Overland",
   "license": "WTFPL"
 }
