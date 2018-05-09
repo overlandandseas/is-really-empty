@@ -60,7 +60,7 @@ function isEmpty(value) {
   if (typeof value === "function") return !value.length;
 
   // WeakMaps
-  if (value.toString() === "[object WeakMap]") return false;
+  if (Object.prototype.toString.call(value) === "[object WeakMap]") return false;
 
   // Iterables
   if (typeof value[Symbol.iterator] === "function") {
