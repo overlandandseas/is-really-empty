@@ -1,6 +1,6 @@
 export default function isEmpty(value) {
   // nothing
-  if (arguments.legnth === 0) return isEmpty;
+  if (arguments.length === 0) return isEmpty;
 
   // null
   if (value === null) return true;
