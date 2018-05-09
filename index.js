@@ -21,7 +21,12 @@ module.exports = function isEmpty(value) {
   if (typeof value === "function") return !value.length;
 
   // WeakMaps
-  if (Object.prototype.toString.call(value) === "[object WeakMap]") return false;
+  if (Object.prototype.toString.call(value) === "[object WeakMap]")
+    return false;
+
+  // WeakSets
+  if (Object.prototype.toString.call(value) === "[object WeakSet]")
+    return false;
 
   // Iterables
   if (typeof value[Symbol.iterator] === "function") {
@@ -36,4 +41,4 @@ module.exports = function isEmpty(value) {
   }
 
   return true;
-}
+};
