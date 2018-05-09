@@ -1,4 +1,4 @@
-export default function isEmpty(value) {
+module.exports = function isEmpty(value) {
   // nothing
   if (arguments.length === 0) return isEmpty;
 
