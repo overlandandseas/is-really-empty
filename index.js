@@ -21,7 +21,7 @@ export default function isEmpty(value) {
   if (typeof value === "function") return !value.length;
 
   // WeakMaps
-  if (value.toSting() === "[object WeakMap]") return false;
+  if (value.toString() === "[object WeakMap]") return false;
 
   // Iterables
   if (typeof value[Symbol.iterator] === "function") {
