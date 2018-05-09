@@ -1,4 +1,4 @@
-
+'use strict'
 
 const objects = {
   null: null,
@@ -13,22 +13,25 @@ const objects = {
   'function () {}': function () {},
   'function (a, b) {}': function (a, b) {},
   '[]': [],
-  '[1]': [],
+  '[1]': [1],
   'new Set': new Set,
   'new Set().add(1)': new Set().add(1),
   'new Map': new Map,
   'new Map().set(1, 2)': new Map().set(1, 2),
   'new WeakMap': new WeakMap,
-  'new WeakMap.set({}, 1)': new WeakMap().set({}, 1),
+  'new WeakMap().set({}, 1)': new WeakMap().set({}, 1),
   '{}': {},
-  '{foo:\'bar\'}': { foo: 'bar' },
+  '{ foo: \'bar\' }': { foo: 'bar' },
+  '(function * () {})()': (function *(){})(),
+  '(function * () { yield 1 })()': (function *(){ yield 1 })(),
+  'new function () {}': new function(){},
+  'new function (a) { this.a = a }': new function (a){ this.a = a},
 }
 
-let elements = '<ul class="code list pl0 ml5 mw5 shadow-1">';
+let elements = '<ul class="code list pl0 ml5-l mr3 ml3 shadow-1" style="max-width: 432px">';
 elements += Object.keys(objects).map(val => {
   return `<li class="ph3 pv2 bb b--light-silver ${isEmpty(objects[val]) ? 'bg-light-green' : 'bg-washed-red'}">${val}</li>`
 }).join('')
-
 elements += '</ul>'
 
 document.getElementById('content').innerHTML  = elements;
@@ -36,7 +39,7 @@ document.getElementById('content').innerHTML  = elements;
 
 function isEmpty(value) {
   // nothing
-  if (arguments.legnth === 0) return isEmpty;
+  if (arguments.length === 0) return isEmpty;
 
   // null
   if (value === null) return true;
