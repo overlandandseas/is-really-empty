@@ -103,9 +103,9 @@ objects.map(isEmpty).forEach((val, index) => {
   }
 });
 
-if (errors.length > 0) {
-  process.exit(1);
-} else {
+if (isEmpty(errors)) {
   console.log("Test Pass");
   process.exit(0);
+} else {
+  process.exit(1);
 }
