@@ -1,6 +1,6 @@
 module.exports = function isEmpty(value) {
   // nothing
-  if (arguments.length === 0) return isEmpty;
+  if (isEmpty(arguments)) return isEmpty;
 
   // null
   if (value === null) return true;
