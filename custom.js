@@ -14,6 +14,9 @@ const objects = {
   "function (a, b) {}": function(a, b) {},
   "[]": [],
   "[1]": [1],
+  "new Array(3)": new Array(3),
+  "new Array(3).fill()": new Array(3).fill(),
+  "[,,,]": [,,,],
   "new Set": new Set(),
   "new Set().add(1)": new Set().add(1),
   "new Map": new Map(),
@@ -78,16 +81,16 @@ function isEmpty(value) {
     return false;
 
   // Iterables
-  if (typeof value[Symbol.iterator] === "function") {
+  if (!Array.isArray(value) && typeof value[Symbol.iterator] === "function") {
     for (var a of value) {
       return false;
     }
   }
 
-  // Objects
+  // Objects & Arrays
   for (var a in value) {
     return false;
   }
 
   return true;
-}
+};
