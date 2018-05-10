@@ -1,4 +1,6 @@
 # is-really-empty 🌌
+[![npm](https://img.shields.io/npm/dw/is-really-empty.svg)](https://www.npmjs.com/package/is-really-empty)
+
 
 A Small library to tell if the passed value is _really_ empty.
 
