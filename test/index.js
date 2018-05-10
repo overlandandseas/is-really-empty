@@ -31,7 +31,9 @@ const objects = [
   new function() {}(),
   new function(a) {
     this.a = a;
-  }()
+  }(),
+  new Array(2),
+  new Array(2).fill(),
 ];
 
 const objectList = [
@@ -61,7 +63,9 @@ const objectList = [
   "iterator with no yield",
   "iterator with yield",
   "instance",
-  "instance with data member"
+  "instance with data member",
+  "array created with constructor",
+  "array from constructor filled",
 ];
 
 const answers = [
@@ -85,6 +89,8 @@ const answers = [
   false,
   false,
   false,
+  false,
+  true,
   false,
   true,
   false,

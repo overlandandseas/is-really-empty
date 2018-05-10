@@ -29,13 +29,13 @@ module.exports = function isEmpty(value) {
     return false;
 
   // Iterables
-  if (typeof value[Symbol.iterator] === "function") {
+  if (!Array.isArray(value) && typeof value[Symbol.iterator] === "function") {
     for (var a of value) {
       return false;
     }
   }
 
-  // Objects
+  // Objects & Arrays
   for (var a in value) {
     return false;
   }
