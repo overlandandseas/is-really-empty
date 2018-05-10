@@ -1,5 +1,5 @@
 # is-really-empty 🌌
-[![npm](https://img.shields.io/npm/dw/is-really-empty.svg)](https://www.npmjs.com/package/is-really-empty)
+[![npm](https://img.shields.io/npm/v/is-really-empty.svg)](https://www.npmjs.com/package/is-really-empty)
 
 
 A Small library to tell if the passed value is _really_ empty.
@@ -21,7 +21,7 @@ undefined, and NaN are all empty as they are the absence of value and often
 defaults for some cases.
 
 #### Iterables
-Since the only way to tell if an iterable is empty is by traversing it, this
+Since the way it tells if an iterable is empty is by traversing it, this
 will call a getter or a yield (in a generator function) if they exist as the
 first property.
 
