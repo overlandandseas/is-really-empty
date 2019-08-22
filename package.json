@@ -1,6 +1,6 @@
 {
   "name": "is-really-empty",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Checks is passed in value is really empty or not.",
   "main": "index.js",
   "scripts": {
