@@ -37,67 +37,67 @@ const objects = [
 ];
 
 const objectList = [
-  "null",
-  "undefined",
-  "true",
-  "false",
-  "0",
-  "1",
-  "NaN",
-  "Empty String",
-  "String",
-  "function 0 params",
-  "function multiple params",
-  "empty array",
-  "filled array",
-  "empty set",
-  "filled set",
-  "empty map",
-  "filled map",
-  "empty weakmap",
-  "filled weakmap",
-  "empty weakset",
-  "filled weakset",
-  "empty object",
-  "filled object",
-  "iterator with no yield",
-  "iterator with yield",
-  "instance",
-  "instance with data member",
-  "array created with constructor",
-  "array from constructor filled",
+  "null",                             // true
+  "undefined",                        // true
+  "true",                             // false
+  "false",                            // false
+  "0",                                // false
+  "1",                                // false
+  "NaN",                              // true
+  "Empty String",                     // true
+  "String",                           // false
+  "function 0 params",                // true
+  "function multiple params",         // false
+  "empty array",                      // true
+  "filled array",                     // false
+  "empty set",                        // true
+  "filled set",                       // false
+  "empty map",                        // true
+  "filled map",                       // false
+  "empty weakmap",                    // false
+  "filled weakmap",                   // false
+  "empty weakset",                    // false
+  "filled weakset",                   // false
+  "empty object",                     // true
+  "filled object",                    // false
+  "iterator with no yield",           // true
+  "iterator with yield",              // false
+  "instance",                         // true
+  "instance with data member",        // false
+  "array created with constructor",   // true
+  "array from constructor filled",    // false
 ];
 
 const answers = [
-  true,
-  true,
-  false,
-  true,
-  false,
-  false,
-  true,
-  true,
-  false,
-  true,
-  false,
-  true,
-  false,
-  true,
-  false,
-  true,
-  false,
-  false,
-  false,
-  false,
-  false,
-  true,
-  false,
-  true,
-  false,
-  true,
-  false,
-  true,
-  false
+  true,   // null
+  true,   // undefined
+  false,  // true
+  false,   // false
+  false,  // 0,
+  false,  // 1,
+  true,   // NaN
+  true,   // Empty String
+  false,  // String
+  true,   // function 0 params
+  false,  // function multiple params
+  true,   // empty array
+  false,  // filled array
+  true,   // empty set
+  false,  // filled set
+  true,   // empty map
+  false,  // filled map
+  false,  // empty weakmap
+  false,  // filled weakmap
+  false,  // empty weakset
+  false,  // filled weakset
+  true,   // empty object
+  false,  // filled object
+  true,   // iterator with no yield
+  false,  // iterator with yield
+  true,   // instance
+  false,  // instance with data member
+  true,   // array created with constructor
+  false,  // array from constructor filled
 ];
 const errors = [];
 objects.map(isEmpty).forEach((val, index) => {

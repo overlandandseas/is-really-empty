@@ -9,7 +9,7 @@ module.exports = function isEmpty(value) {
   if (typeof value === "undefined") return true;
 
   // bools
-  if (typeof value === "boolean") return !value;
+  if (typeof value === "boolean") return false;
 
   // number
   if (typeof value === "number") return Number.isNaN(value);
