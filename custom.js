@@ -52,7 +52,7 @@ document.getElementById("content").innerHTML = elements;
 
 function isEmpty(value) {
   // nothing
-  if (arguments.length === 0) return isEmpty;
+  if (arguments.length === 0) return true;
 
   // null
   if (value === null) return true;
@@ -61,7 +61,7 @@ function isEmpty(value) {
   if (typeof value === "undefined") return true;
 
   // bools
-  if (typeof value === "boolean") return !value;
+  if (typeof value === "boolean") return false;
 
   // number
   if (typeof value === "number") return Number.isNaN(value);
